@@ -1,17 +1,9 @@
 import { GithubOutlined } from '@ant-design/icons';
 import { DefaultFooter } from '@ant-design/pro-components';
-import { useIntl } from '@umijs/max';
-import React from 'react';
-
+import '@umijs/max';
 const Footer: React.FC = () => {
-  const intl = useIntl();
-  const defaultMessage = intl.formatMessage({
-    id: 'app.copyright.produced',
-    defaultMessage: '蚂蚁集团体验技术部出品',
-  });
-
+  const defaultMessage = '蚂蚁集团体验技术部出品';
   const currentYear = new Date().getFullYear();
-
   return (
     <DefaultFooter
       style={{
@@ -20,9 +12,9 @@ const Footer: React.FC = () => {
       copyright={`${currentYear} ${defaultMessage}`}
       links={[
         {
-          key: 'Ant Design Pro',
-          title: 'Ant Design Pro',
-          href: 'https://pro.ant.design',
+          key: '登录页',
+          title: '登录页',
+          href: './user/login',
           blankTarget: true,
         },
         {
@@ -32,14 +24,13 @@ const Footer: React.FC = () => {
           blankTarget: true,
         },
         {
-          key: 'Ant Design',
-          title: 'Ant Design',
-          href: 'https://ant.design',
+          key: '我的接口',
+          title: '我的接口',
+          href: 'https://github.com/z1013007148/myAPI-frontend',
           blankTarget: true,
         },
       ]}
     />
   );
 };
-
 export default Footer;
