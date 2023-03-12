@@ -111,4 +111,9 @@ export default defineConfig({
   mfsu: {
     exclude: ['@playwright/test'],
   },
+  // base: 'http://124.71.132.236/myAPI/',
+  // publicPath: 'http://124.71.132.236/myAPI/',
+  // base: '/home/user1/myAPI_server/dist/',
+  // publicPath: '/myAPI/',
 });
+
