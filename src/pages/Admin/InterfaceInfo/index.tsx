@@ -222,7 +222,7 @@ const TableList: React.FC = () => {
       valueType: 'option',
       render: (_, record) => [
         <a
-          key="config"
+          key={`config-${record.id}-modify`}
           onClick={() => {
             handleUpdateModalVisible(true);
             setCurrentRow(record);
@@ -231,7 +231,7 @@ const TableList: React.FC = () => {
           修改
         </a>,
         record.status === 0 ? <a
-          key="config"
+          key={`config-${record.id}-publish`}
           onClick={() => {
             handleOnline(record);
           }}
@@ -240,7 +240,7 @@ const TableList: React.FC = () => {
         </a> : null,
         record.status === 1 ? <Button
           type="text"
-          key="config"
+          key={`config-${record.id}-offline`}
           danger
           onClick={() => {
             handleOffline(record);
@@ -250,7 +250,7 @@ const TableList: React.FC = () => {
         </Button> : null,
         <Button
           type="text"
-          key="config"
+          key={`config-${record.id}-remove`}
           danger
           onClick={() => {
             handleRemove(record);

@@ -15,8 +15,8 @@ interface ResponseStructure {
  * @doc https://umijs.org/docs/max/request#配置
  */
 export const requestConfig: RequestConfig = {
-  // baseURL: 'http://localhost:7529',
-  baseURL: 'http://124.71.132.236:7529',
+  baseURL: 'http://localhost:7529',
+  // baseURL: 'http://124.71.132.236:7529', // 在华为云上部署
   withCredentials: true,
   // 请求拦截器
   requestInterceptors: [

@@ -1,25 +1,18 @@
 import Footer from '@/components/Footer';
-import { getFakeCaptcha } from '@/services/ant-design-pro/login';
+import { userLoginUsingPOST } from '@/services/myAPI-backend/userController';
 import {
-  AlipayCircleOutlined,
   LockOutlined,
-  MobileOutlined,
-  TaobaoCircleOutlined,
-  UserOutlined,
-  WeiboCircleOutlined,
+  UserOutlined
 } from '@ant-design/icons';
 import {
   LoginForm,
-  ProFormCaptcha,
-  ProFormCheckbox,
-  ProFormText,
+  ProFormText
 } from '@ant-design/pro-components';
 import { history, useModel } from '@umijs/max';
-import { Alert, message, Tabs } from 'antd';
+import { Alert, Tabs, message } from 'antd';
 import React, { useState } from 'react';
-import { flushSync } from 'react-dom';
+import { Link } from 'umi';
 import styles from './index.less';
-import { userLoginUsingPOST } from '@/services/myAPI-backend/userController';
 
 const LoginMessage: React.FC<{
   content: string;
@@ -66,6 +59,7 @@ const Login: React.FC = () => {
         <LoginForm
           logo={<img alt="logo" src="/logo.svg" />}
           title="我的接口"
+          // subTitle={'API 接口平台(后台数据库被黑客攻击了，暂时无法登录)'}
           subTitle={'API 接口平台'}
           initialValues={{
             autoLogin: true,
